@@ -1,0 +1,31 @@
+<style>
+  * {
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    padding-left: 10px;
+  }
+
+  input {
+    display: inline-block;
+    padding: 2px 4px;
+    border: 1px solid #333;
+    color: #333;
+  }
+
+  p {
+    display: block;
+    padding: 4px 0;
+  }
+
+  p span {
+    font-size: 12px;
+  }
+</style>
+
+<h1>{{ title }}</h1>
+<input type="text" #item autofocus><button (click)="add(item)">ADD</button>
+<p template="foreach #item in list">
+  <span (click)="remove(item)">[x]</span> {{item}}
+</p>
